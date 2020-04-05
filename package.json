@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "debug": "yarn ts-node ./src/bin/www",
+    "start-f": "forever start forever.json",
     "start": "node ./build/bin/www.js",
     "status": "forever list",
     "stop": "forever stopall",
