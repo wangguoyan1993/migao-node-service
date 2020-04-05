@@ -1,0 +1,10 @@
+{
+    "uid": "migao",
+    "append": true,
+    "watch": true,
+    "script": "./build/bin/www.js",
+    "sourceDir": "./",
+    "logFile": "./forever.log",
+    "outFile": "./console.log",
+    "errFile": "./error.log"
+}

@@ -1,0 +1,7 @@
+node_modules
+build
+
+error.log
+console.log
+yarn-error.log
+
