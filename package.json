@@ -12,10 +12,7 @@
   },
   "dependencies": {
     "art-template": "^4.13.2",
-<<<<<<< HEAD
     "axios": "^0.19.2",
-=======
->>>>>>> - 更换模板引擎
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
