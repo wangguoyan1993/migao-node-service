@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "debug": "yarn ts-node ./src/bin/www",
+    "debug": "yarn ts-node ./src/bin/www.ts",
     "start-f": "forever start forever.json",
     "start": "node ./build/bin/www.js",
     "status": "forever list",
