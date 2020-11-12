@@ -9,9 +9,10 @@ let usersRouter = require('./routes/users');
 
 let app = express();
 
+app.engine('art', require('express-art-template'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'art');
 
 app.use(logger('dev'));
 app.use(express.json());
