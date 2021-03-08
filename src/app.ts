@@ -9,10 +9,10 @@ let usersRouter = require('./routes/users');
 
 let application = Express();
 
-app.engine('art', require('express-art-template'));
+application.engine('art', require('express-art-template'));
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'art');
+application.set('views', path.join(__dirname, 'views'));
+application.set('view engine', 'art');
 
 application.use(logger('dev'));
 application.use(Express.json());
@@ -24,12 +24,12 @@ application.use('/', indexRouter);
 application.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-application.use(function(req, res, next) {
+application.use(function(req: any, res: any, next: (arg0: any) => void) {
   next(createError(404));
 });
 
 // error handler
-application.use(function(err, req, res, next) {
+application.use(function(err: { message: any; status: any; }, req: { application: { get: (arg0: string) => string; }; }, res: { locals: { message: any; error: any; }; status: (arg0: any) => void; render: (arg0: string) => void; }, next: any) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.application.get('env') === 'development' ? err : {};
