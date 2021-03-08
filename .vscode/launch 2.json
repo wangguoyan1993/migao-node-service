@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MigaoServerDebug",     // 项目调试配置名称
+            "type": "node",                 // 调试的运行环境类型
+            "request": "launch",            // 这里两个选项 launch 或 attach，launch为主配置，attach可以为你提供不同端口但同样代码的服务的调试，详细可参考官网
+            "args": [                       // 固定参数，由字符串数组组成
+                "${workspaceRoot}/src/bin/www.ts"   // 规定了启动文件，这里指定对应项目的启动文件，其中${workspaceRoot}是全局变量，这里提供了多个全局变量方便配置，详情参考官网
+            ],
+            "runtimeArgs": [                // 运行参数，会在cli和启动文件中间添加
+                "--nolazy",
+                "-r",
+                "ts-node/register"          // 这里前文介绍过，要使用ts-node的register模块
+            ],
+            "sourceMaps": true,             // 开启sourceMapsmoshi 
+            "cwd": "${workspaceRoot}",      // 运行目录
+            "protocol": "inspector",        // 运行协议，主要针对新旧版本的V8协议进行配置，这里使用新版本的协议
+            "console": "integratedTerminal" // 日志打印输出，可以针对内部控制台，集成终端和外部控制台进行配置，大家根据情况自行配置
+        }
+    ]
+}

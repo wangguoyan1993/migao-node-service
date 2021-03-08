@@ -11,6 +11,7 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.15",
     "art-template": "^4.13.2",
     "axios": "^0.19.2",
     "cookie-parser": "~1.4.4",
@@ -20,6 +21,7 @@
     "http-errors": "~1.6.3",
     "jade": "^1.11.0",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
     "pug": "^2.0.4"
   },
   "devDependencies": {
