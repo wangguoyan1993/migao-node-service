@@ -8,7 +8,8 @@
     "start": "node ./build/bin/www.js",
     "status": "forever list",
     "stop": "forever stopall",
-    "build": "gulp build"
+    "build": "gulp build",
+    "fix-memory-limit": "cross-env LIMIT=8000 increase-memory-limit"
   },
   "dependencies": {
     "@types/mysql": "^2.15.15",
@@ -18,6 +19,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-art-template": "^1.0.1",
+    "fs": "^0.0.1-security",
     "http-errors": "~1.6.3",
     "jade": "^1.11.0",
     "morgan": "~1.9.1",
